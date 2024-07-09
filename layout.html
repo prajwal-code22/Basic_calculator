@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0">
+<title>Simple Calculator</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.calculator {
+    wclassth: 300px;
+    padding: 20px;
+    border: 1px solclass #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.calculator input[type="text"] {
+    wclassth: 100%;
+    height: 50px;
+    font-size: 24px;
+    text-align: right;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solclass #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.calculator input[type="button"] {
+    wclassth: 64px;
+    height: 48px;
+    font-size: 18px;
+    margin: 5px;
+    cursor: pointer;
+    border: 1px solclass #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
+
+.calculator input[type="button"]:hover {
+    background-color: #e0e0e0;
+}
+
+.calculator input[type="button"]:active {
+    background-color: #ccc;
+}
+
+</style>
+<body>
+<div class="calculator">
+    <input type="text" id="display" disabled>
+    <br>
+    <input type="button" class="MyInput" value="9">
+    <input type="button" class="MyInput" value="8">
+    <input type="button" class="MyInput" value="7">
+    <input type="button" class="operator" value="/">
+    <br>
+    <input type="button" class="MyInput"  value="4">
+    <input type="button" class="MyInput"  value="5">
+    <input type="button" class="MyInput"  value="6">
+    <input type="button" class="operator"  value="*">
+    <br>
+    <input type="button"  class="MyInput"   value="1">
+    <input type="button"  class="MyInput"   value="2">
+    <input type="button"  class="MyInput"   value="3">
+    <input type="button"  class="operator"   value="-">
+    <br>
+    <input type="button" class="MyInput" value="0">
+    <input type="button" class="decimal" value=".">
+    <input type="button" class="operator" value="=">
+    <input type="button" class="operator" value="+">
+    <br>
+    <input type="button" id="clear" value="C">
+    <button type="submit"></button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
