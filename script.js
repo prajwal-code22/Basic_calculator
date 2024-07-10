@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var operators = document.getElementsByClassName("operator");
     var displayElement = document.getElementById("display");
     var clearElement=document.getElementById("clear");
+    var result='';
+    result_display=false;
     var values = [];
 
     function display(value) {
@@ -79,18 +81,22 @@ document.addEventListener('DOMContentLoaded', function() {
     function calculate(values) {
         values.pop(); // Remove '='
         var postfix = infixToPostfix(values);
-        var result = evaluatePostfix(postfix);
+        result = evaluatePostfix(postfix).toString();
         display(result);
-        // Reset values for further calculations
-        values.length = 0;
-        values.push(result.toString());
+        result_display=true;
+        
     }
 
     function handleButtonClick(event) {
         var value = event.target.value;
+        if (result_display && checkoperator(value)) {
+            values = [];  
+            values = [...result.split('')]; 
+            result_display = false;
+        }
+
         values.push(value);
         display(values.join(''));
-        
         if (value === '=') {
             calculate(values);
         }
